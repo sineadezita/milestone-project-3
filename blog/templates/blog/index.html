@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<!-- index.html starts here -->
+
+    <!-- Hero Section made with Boostrap container and custom styling -->
+    <section class="hero-section">
+        <div class="container">
+            <h1>The Future of Fashion</h1>
+            <p>Exploring the intersection of technology and fashion. Discover insights
+            on AI, wearables, sustainability, and digital innovation.
+            </p>
+        </div>
+    </section>
+
+    <!-- Article Section -->
+    <div class="container articles-section">
+        <div class="row g-5">
+            {% for post in post_list %}
+            <div class="col-md-6 col-lg-4">
+                <article class="card">
+                    <div class="article-image">
+                        Featured Image
+                    </div>
+                    <div class="card-body">
+                        <span class="category-badge">{{ post.category }}</span>
+                        <a href="#" class="post-link">
+                            <h2 class="card-title">{{ post.title }}</h2>
+                        </a>
+                        <p class="card-text">{{ post.excerpt }}</p>
+                        <div class="article-meta">
+                            <span>By {{ post.author }}</span>
+                            <span class="ms-3">{{ post.created_on }}</span>
+                        </div>
+                        <a href="#" class="read-more">Read Article
+                        </a>
+                    </div>
+                </article>
+            </div>
+            {% endfor %}
+    </div>
+
+    <!-- Pagination -->
+    {% if is_paginated %}
+    <nav aria-label="Article pagination">
+        <ul class="pagination justify-content-center">
+            {% if page_obj.has_previous %}
+            <li class="page-item">
+                <a class="page-link" href="?page={{ page_obj.previous_page_number }}">&laquo; PREV</a>
+            </li>
+            {% endif %}
+            {% if page_obj.has_next %}
+            <li class="page-item">
+                <a class="page-link" href="?page={{ page_obj.next_page_number }}"> NEXT &raquo;</a>
+            </li>
+            {% endif %}
+        </ul>
+    </nav>
+    {% endif %}
+    </div>
+
+
+
+<!-- index.html content ends here -->
+{% endblock %}
+
+    {% block copyright %}
+        &copy; 2025 Fashion Tech. All rights reserved.
+    {% endblock %}
