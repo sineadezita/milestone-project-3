@@ -25,7 +25,7 @@
                     </div>
                     <div class="card-body">
                         <span class="category-badge">{{ post.category }}</span>
-                        <a href="#" class="post-link">
+                        <a href="{% url 'fashion_post' post.slug %}" class="post-link">
                             <h2 class="card-title">{{ post.title }}</h2>
                         </a>
                         <p class="card-text">{{ post.excerpt }}</p>
@@ -33,7 +33,7 @@
                             <span>By {{ post.author }}</span>
                             <span class="ms-3">{{ post.created_on }}</span>
                         </div>
-                        <a href="#" class="read-more">Read Article
+                        <a href="{% url 'fashion_post' post.slug %}" class="read-more">Read Article
                         </a>
                     </div>
                 </article>

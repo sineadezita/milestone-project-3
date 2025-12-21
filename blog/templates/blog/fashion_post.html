@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+<div class="container my-5">
+    <article class="fashion_post">
+        <!-- Article Header -->
+        <header class="post-header mb-5">
+            <span class="category-badge">{{ post.category }}</span>
+            <h1 class="post.title mt-3">{{ post.title }}</h1>
+            <div class="post-meta">
+                <span>By {{ post.author }}</span>
+                <span class="mx-2">|</span>
+                <span>{{ post.created_on }}</span>
+            </div>
+        </header>
+
+        <!-- Article Content -->
+        <div class="post-content">{{ post.content|safe }}</div>
+
+        <!-- Back to Article -->
+        <div class="mt-5 text-center">
+            <a class="read-more" href="{% url 'home' %}">&larr; Back to Articles</a>
+        </div>
+    </article>
+</div>
+
+{% endblock content %}
