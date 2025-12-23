@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+
+
+<div class="container my-5">
+    <div class="row">
+        <div class="col-md-5 mb-4">
+            <div class="about-image">
+                <!-- Image src here -->
+            </div>
+        </div>
+        <div class="col-12 col-md-7">
+            <h1 class="about-title mb-4">{{ about.title }}</h1>
+
+            <div class="about-content">
+                <!-- Content from database-->
+                <p>Welcome to Fashion Tech, your first destination for insights at the intersection of fashion and technology.</p>
+
+                <p>We are a collaborative platform dedicated to exploring how innovation is transforming the fashion industry. 
+                From artificial intelligence and wearable technology to sustainable practices and digital fashion, we cover the trends shaping the future of style.
+                </p>
+
+                <h3 class="mt-4 mb-3">What We Cover</h3>
+                <ul>
+                    <li>AI & Machine Learning in Fashion</li>
+                    <li>Wearable Technology & Smart Fabrics</li>
+                    <li>E-commerce innovation</li>
+                    <li>Sustainable Fashion Technology</li>
+                    <li>Digital Fashion & The Metaverse</li>
+                </ul>
+
+                <p>Join us as we explore the exciting convergence of fashion and technology in Europe and beyond.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mt-4">
+        <div class="col text-end">
+            <!-- Updated-on from database -->
+             <p class="text-muted"><em>Updated on: {{ about.updated_on }}</em></p>
+        </div>
+    </div>
+
+    <div class="row justify-content-center mt-5">
+        <div class="col-12 col-md-8">
+            <h2 class="mb-4">Let's collaborate!</h2>
+            <p>We believe in the power of shared knowledge. Whether you have a project in mind, wish to contribute an article, or simply want to discuss the latest in fashion technology
+            we're excited to hear from you. Fill out the form and let's start the conversation!
+            </p>
+
+            <!-- Add form to collaborate -->
+        </div>
+    </div>
+</div>
+
+{% endblock content %}
+
+    {% block copyright %}
+        &copy; 2025 Fashion Tech. All rights reserved.
+    {% endblock %}
