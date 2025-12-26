@@ -1,6 +1,9 @@
 {% load static %}
 {% url 'home' as home_url %}
 {% url 'about' as about_url%}
+{% url 'account_login' as login_url %}
+{% url 'account_signup' as signup_url %}
+{% url 'account_logout' as logout_url %}
 
 
 <!DOCTYPE html>
@@ -37,14 +40,27 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto align-items-center">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">HOME</a>
+                        <a class="nav-link" href="{% url 'home' %}">HOME</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link {% if request.path == about_url %}active{% endif %}" href="{% url 'about' %}">ABOUT</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">BLOG</a>
+                        <a class="nav-link" href="{% url 'home' %}">BLOG</a>
                     </li>
+                    {% if user.is_authenticated %}
+                    <li class="nav-item">
+	                    <a class="nav-link {% if request.path == logout_url %}active{% endif %}" aria-current="page" href="{% url 'account_logout' %}">LOGOUT</a>
+                    </li>
+                    {% else %}
+                    <li class="nav-item">
+	                <a class="nav-link {% if request.path == signup_url %}active{% endif %}" aria-current="page"
+		                href="{% url 'account_signup' %}">SIGN UP</a>
+                    </li>
+                    <li class="nav-item">
+	                    <a class="nav-link {% if request.path == login_url %}active{% endif %}" aria-current="page" href="{% url 'account_login' %}">LOGIN</a>
+                    </li>
+                    {% endif %}
                 </ul>
             </div>
         </div>
@@ -61,6 +77,34 @@
     <!-- Footer -->
     <footer>
         <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-3 mb-4">
+                    <h3 class="footer-title">RESOURCES</h3>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="{% url 'about' %}">About</a></li>
+                        <li class="mb-2"><a href="{% url 'home' %}">Articles</a></li>
+                        <li class="mb-2"><a href="{% url 'about' %}">Write for Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h3 class="footer-title">CATEGORIES</h3>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#">AI & Machine Learning</a></li>
+                        <li class="mb-2"><a href="#">Wearable Technology</a></li>
+                        <li class="mb-2"><a href="#">E-commerce Innovation</a></li>
+                        <li class="mb-2"><a href="#">Sustainable Fashion</a></li>
+                        <li class="mb-2"><a href="#">Digital Fashion</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h3 class="footer-title">CONNECT</h3>
+                    <ul class="list-unstyled">
+                        <li class="mb-2">Twitter</li>
+                        <li class="mb-2">LinkedIn</li>
+                        <li class="mb-2">Instagram</li>
+                    </ul>
+                </div>
+            </div>
             <div class="footer-content">
                 <div class="copyright">
                     {% block copyright %}
