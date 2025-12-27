@@ -1,4 +1,4 @@
-• {
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -22,7 +22,7 @@ body {
     box-shadow: none;
 }
 
-.navbar-bav .nav-link {
+.navbar-nav .nav-link {
     color: #333333 !important;
     font-size: 14px;
     letter-spacing: 1px;
@@ -132,7 +132,7 @@ body {
     transition: color 0.3s;
 }
 
-.car-text {
+.card-text {
     font-size: 15px;
     color: #666666;
     line-height: 1.7;
@@ -179,7 +179,7 @@ body {
 
 .page-item.active .page-link {
     background-color: #000000;
-    border: #000000;
+    border-color: #000000;
     color: #ffffff;
 }
 
@@ -213,7 +213,7 @@ footer a {
     transition: color 0.3s;
 }
 
-footer a:hoover {
+footer a:hover {
     color: #000000;
 }
 
@@ -234,4 +234,80 @@ footer a:hoover {
     .navbar-brand {
         font-size: 18px;
     }
+}
+
+/* Logon, Signup & Logout Forms */
+.container h3 {
+    font-size: 28px;
+    font-weight: 300;
+    color: #000000;
+    margin-bottom: 20px;
+}
+
+.container p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #666666;
+}
+
+.container p a {
+    color: #000000;
+    text-decoration: underline;
+}
+
+.container p a:hover {
+    opacity: 0.6;
+}
+
+/* Form Fields */
+form.login label,
+form.signup label,
+form.logout label {
+    font-size: 14px;
+    font-weight: 400;
+    color: #333333;
+    margin-bottom: 5px;
+    display: block;
+}
+
+form.login input[type="text"],
+form.login input[type="email"],
+form.login input[type="password"],
+form.signup input[type="text"],
+form.signup input[type="email"],
+form.signup input[type="password"] {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    border: 1px solid #e0e0e0;
+    padding: 10px;
+    font-size: 15px;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+form.login input:focus,
+form.signup input:focus {
+    outline: none;
+    border-color: #000000;
+}
+
+/* Black Submit Button */
+.btn-signin,
+.btn-signup,
+.btn-logout {
+    background-color: #000000;
+    color: #ffffff;
+    border: none;
+    padding: 12px 30px;
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: opacity 0.3s;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+.btn-signin:hover,
+.btn-signup:hover,
+.btn-logout:hover {
+    opacity: 0.8;
 }
