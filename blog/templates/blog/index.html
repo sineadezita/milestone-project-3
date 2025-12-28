@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-
+{% load static %}
 {% block content %}
 
 <!-- index.html starts here -->
@@ -21,7 +21,11 @@
             <div class="col-md-6 col-lg-4">
                 <article class="card">
                     <div class="article-image">
-                        Featured Image
+                        {% if "placeholder" in post.featured_image.url %}
+                            <img src="{% static 'images/default.jpg' %}" alt="placeholder image">
+                        {% else %}
+                            <img src=" {{ post.featured_image.url }}" alt="{{ post.title }}">
+                        {% endif %}
                     </div>
                     <div class="card-body">
                         <span class="category-badge">{{ post.category }}</span>
