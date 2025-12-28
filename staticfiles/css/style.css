@@ -259,37 +259,6 @@ footer a:hover {
     opacity: 0.6;
 }
 
-/* Form Fields */
-form.login label,
-form.signup label,
-form.logout label {
-    font-size: 14px;
-    font-weight: 400;
-    color: #333333;
-    margin-bottom: 5px;
-    display: block;
-}
-
-form.login input[type="text"],
-form.login input[type="email"],
-form.login input[type="password"],
-form.signup input[type="text"],
-form.signup input[type="email"],
-form.signup input[type="password"] {
-    font-family: 'Helvetica Neue', Arial, sans-serif;
-    border: 1px solid #e0e0e0;
-    padding: 10px;
-    font-size: 15px;
-    width: 100%;
-    margin-bottom: 15px;
-}
-
-form.login input:focus,
-form.signup input:focus {
-    outline: none;
-    border-color: #000000;
-}
-
 /* Black Submit Button */
 .btn-signin,
 .btn-signup,
@@ -304,6 +273,8 @@ form.signup input:focus {
     cursor: pointer;
     transition: opacity 0.3s;
     font-family: 'Helvetica Neue', Arial, sans-serif;
+    display: inline-block;
+    margin: 10px;
 }
 
 .btn-signin:hover,
