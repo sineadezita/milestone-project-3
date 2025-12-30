@@ -22,7 +22,7 @@ body {
     box-shadow: none;
 }
 
-.navbar-bav .nav-link {
+.navbar-nav .nav-link {
     color: #333333 !important;
     font-size: 14px;
     letter-spacing: 1px;
@@ -139,7 +139,7 @@ body {
     transition: color 0.3s;
 }
 
-.car-text {
+.card-text {
     font-size: 15px;
     color: #666666;
     line-height: 1.7;
@@ -220,7 +220,7 @@ footer a {
     transition: color 0.3s;
 }
 
-footer a:hoover {
+footer a:hover {
     color: #000000;
 }
 
