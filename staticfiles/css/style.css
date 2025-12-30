@@ -45,8 +45,9 @@ body {
 }
 
 .btn-register:hover {
-    opacity: 0.8;
+    background-color: #333333;
     color: #ffffff;
+    border: 1px solid #333333;
 }
 
 .hero-section {
@@ -91,11 +92,18 @@ body {
     height: 250px;
     background-color: #f5f5f5;
     margin-bottom: 20px;
+    overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
     color: #cccccc;
     font-size: 14px;
+}
+
+.article-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .card-body {
@@ -179,7 +187,7 @@ body {
 
 .page-item.active .page-link {
     background-color: #000000;
-    border-color: #000000;
+    border: #000000;
     color: #ffffff;
 }
 
@@ -226,6 +234,36 @@ footer a:hover {
     font-size: 13px;
 }
 
+/* About Page Styles */
+.about-content h1,
+.about-content .mb-4 {
+    font-size: 48px;
+    font-weight: 300;
+    letter-spacing: 3px;
+    color: #000000;
+}
+
+.about-content p {
+    font-size: 16px;
+    color: #666666;
+}
+
+.about-content h3 {
+    font-size: 24px;
+    font-weight: 400;
+    color: #000000;
+}
+
+.about-content ul li {
+    font-size: 15px;
+    color: #666666;
+}
+
+.about-image img {
+    width: 85%;
+    height: auto;
+}
+
 @media (max-width: 768px) {
     .hero-section h1 {
         font-size: 32px;
@@ -234,51 +272,4 @@ footer a:hover {
     .navbar-brand {
         font-size: 18px;
     }
-}
-
-/* Logon, Signup & Logout Forms */
-.container h3 {
-    font-size: 28px;
-    font-weight: 300;
-    color: #000000;
-    margin-bottom: 20px;
-}
-
-.container p {
-    font-size: 16px;
-    line-height: 1.8;
-    color: #666666;
-}
-
-.container p a {
-    color: #000000;
-    text-decoration: underline;
-}
-
-.container p a:hover {
-    opacity: 0.6;
-}
-
-/* Black Submit Button */
-.btn-signin,
-.btn-signup,
-.btn-logout {
-    background-color: #000000;
-    color: #ffffff;
-    border: none;
-    padding: 12px 30px;
-    font-size: 14px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    cursor: pointer;
-    transition: opacity 0.3s;
-    font-family: 'Helvetica Neue', Arial, sans-serif;
-    display: inline-block;
-    margin: 10px;
-}
-
-.btn-signin:hover,
-.btn-signup:hover,
-.btn-logout:hover {
-    opacity: 0.8;
 }
