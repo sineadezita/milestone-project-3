@@ -45,8 +45,9 @@ body {
 }
 
 .btn-register:hover {
-    opacity: 0.8;
+    background-color: #333333;
     color: #ffffff;
+    border: 1px solid #333333;
 }
 
 .hero-section {
@@ -231,6 +232,31 @@ footer a:hover {
     border-top: 1px solid #e0e0e0;
     color: #999999;
     font-size: 13px;
+}
+
+/* About Page Styles */
+.about-content h1,
+.about-content .mb-4 {
+    font-size: 48px;
+    font-weight: 300;
+    letter-spacing: 3px;
+    color: #000000;
+}
+
+.about-content p {
+    font-size: 16px;
+    color: #666666;
+}
+
+.about-content h3 {
+    font-size: 24px;
+    font-weight: 400;
+    color: #000000;
+}
+
+.about-content ul li {
+    font-size: 15px;
+    color: #666666;
 }
 
 @media (max-width: 768px) {

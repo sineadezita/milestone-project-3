@@ -18,10 +18,11 @@
             </div>
         </div>
         <div class="col-12 col-md-7">
-            <h1 class="about-title mb-4">{{ about.title }}</h1>
 
             <div class="about-content">
-                <!-- Content from database-->
+                <h1 class="mb-4">{{ about.title }}</h1>
+
+                <p>Welcome to Fashion Tech, your first destination for insights at the intersection of fashion and technology.</p>
 
                 <p>We are a collaborative platform dedicated to exploring how innovation is transforming the fashion industry. 
                 From artificial intelligence and wearable technology to sustainable practices and digital fashion, we cover the trends shaping the future of style.
@@ -50,18 +51,20 @@
 
     <div class="row justify-content-center mt-5">
         <div class="col-12 col-md-8">
-            <h2 class="mb-4">Let's collaborate!</h2>
-            <p>We believe in the power of shared knowledge. Whether you have a project in mind, wish to contribute an article, or simply want to discuss the latest in fashion technology
-            we're excited to hear from you. Fill out the form and let's start the conversation!
-            </p>
+            <div class="about-content">
+                <h2 class="mb-4">Let's collaborate!</h2>
+                <p>We believe in the power of shared knowledge. Whether you have a project in mind, wish to contribute an article, or simply want to discuss the latest in fashion technology
+                we're excited to hear from you. Fill out the form and let's start the conversation!
+                </p>
 
-            <!-- Add form to collaborate -->
-            <form method="post">
-                {{ collaborate_form | crispy }}
-                {% csrf_token %}
-                <button class="btn btn-secondary"
-                  type="submit">Submit</button>
-            </form>
+                <!-- Form to collaborate -->
+                <form method="post">
+                    {{ collaborate_form | crispy }}
+                    {% csrf_token %}
+                    <button class="btn btn-register"
+                    type="submit">Submit</button>
+                </form>
+            </div>
         </div>
     </div>
 </div>
