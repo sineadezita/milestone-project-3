@@ -3,6 +3,8 @@ from .models import About
 from .forms import CollaborateForm
 
 # Create your views here.
+
+
 def about_fashion_tech(request):
     """
     Renders About page
@@ -11,11 +13,15 @@ def about_fashion_tech(request):
         collaborate_form = CollaborateForm(data=request.POST)
         if collaborate_form.is_valid():
             collaborate_form.save()
-            messages.add_message(request, messages.SUCCESS, "We have received your collaboration request. Please allow two working days for our response!")
-    
+            messages.add_message(
+                request, messages.SUCCESS,
+                "We have received your collaboration request. "
+                "Please allow two working days for our response!"
+            )
+
     about = About.objects.first()
     collaborate_form = CollaborateForm()
-    
+
     return render(
         request,
         "about/about.html",

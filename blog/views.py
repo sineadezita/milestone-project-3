@@ -14,7 +14,6 @@ class PostListView(generic.ListView):
     paginate_by = 6
 
 
-
 def fashion_post(request, slug):
     """
     Display an individual :model:`blog.Post`.
@@ -73,7 +72,10 @@ def comment_edit(request, slug, comment_id):
             comment.post = post
             comment.approved = False
             comment.save()
-            messages.add_message(request, messages.SUCCESS, 'You have successfully updated your comment!')
+            messages.add_message(
+                request, messages.SUCCESS,
+                'You have successfully updated your comment!'
+            )
 
             return HttpResponseRedirect(reverse('fashion_post', args=[slug]))
 
@@ -88,8 +90,14 @@ def comment_delete(request, slug, comment_id):
 
     if comment.author == request.user:
         comment.delete()
-        messages.add_message(request, messages.SUCCESS, 'Comment deleted!')
+        messages.add_message(
+            request, messages.SUCCESS,
+            'Comment deleted!'
+        )
     else:
-        messages.add_message(request, messages.ERROR, 'You can only delete your own comments!')
+        messages.add_message(
+            request, messages.ERROR,
+            'You can only delete your own comments!'
+        )
 
     return HttpResponseRedirect(reverse('fashion_post', args=[slug]))
