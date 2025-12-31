@@ -12,7 +12,6 @@ class CustomSignupForm(SignupForm):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         
-        # Remove aria-describedby to fix validation error
-        for field in self.fields.values():
-            if 'aria-describedby' in field.widget.attrs:
-                del field.widget.attrs['aria-describedby']
+        # Change aria-describedby to match Crispy Forms' generated ID
+        if 'password1' in self.fields:
+            self.fields['password1'].widget.attrs['aria-describedby'] = 'hint_id_password1'
