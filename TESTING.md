@@ -22,7 +22,7 @@ All pages pass HTML Validation at [W3C markup validation service](https://valida
 | --- | --- | --- |
 | Home | Pass | ![HTML validation](testing/html-home.png) |
 | About | Pass | ![HTML validation](testing/html-about.png) |
-| Sign Up | 
+| Sign Up | Pass | ![HTML validation](testing/html-sign-up.png) |
 | Sign In | Pass | ![HTML validation](testing/html-sign-in-form.png) |
 | Sign Out | Pass | ![HTML validation](testing/html-sign-out.png) |
 | Article Detail | Pass | ![HTML validation](testing/html-article.png) |
@@ -71,7 +71,7 @@ Python code was validated using PEP8 standards, using [CI Python Linter](https:/
 | about/forms.py | Pass | ![Python validation](testing/about-forms.png) |
 | about/urls.py | Pass | ![Python validation](testing/about-urls.png) |
 | about/apps.py | Pass | ![Python validation](testing/about-apps.png) |
-| fashiontech/urls.py | ![Python validation](testing/fashiontech-urls.png) |
+| fashiontech/urls.py | Pass | ![Python validation](testing/fashiontech-urls.png) |
 
 **Notes**
 - All Python files pass PEP8 validation
