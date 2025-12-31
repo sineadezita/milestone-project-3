@@ -80,6 +80,56 @@ Python code was validated using PEP8 standards, using [CI Python Linter](https:/
 
 ## Manual Feature Testing
 
+| Feature/Test | Expected Outcome | Result |
+| --- | --- | --- |
+| Logo in Navbar | Redirects to homepage | Pass |
+| Nav Links | Redirect to relevant pages (Home, About, Blog ) | Pass |
+| Footer Links | Open relevant sites in new tabs | Pass |
+| Article Cards | Display 6 articles with images and details | Pass |
+| Read Article Link | Redirects to article page | Pass |
+| Pagination | Next/Previous buttons load correct pages | Pass |
+| Sign Up Link | Redirects to registration page | Pass |
+| Sign Up Form; empty field | Prompt to complete form | Pass |
+| Sign Up Form; username exists | Form gives flash message | Pass |
+| Sign Up Form; Valid details | Form submits and notifies user they are signed in | Pass
+| Login Link. | Redirects to login page. | Pass |
+| Login Form; empty. | Will not submit if empty fields. | Pass. |
+| Login Form - incorrect username. | Form submits but doesn't login, displays error. | Pass |
+| Login Form - incorrect password. | Form submits but doesn't login, displays error. | Pass |
+| Login Form - correct details. | Form submits, logs in, redirects to homepage. | Pass |
+| Navbar When Logged In. | Login/Sign Up replaced with Logout. | Pass |
+|Collaboration Form - empty. | Will not submit empty fields. | Pass |
+| Collaboration Form - valid. | Form submits, displays success message. | Pass. |
+| Comment Form - logged out. | Shows "Log in to leave a comment". | Pass. |
+| Comment Form - logged in. | Comment form displays with submit button. | Pass. |
+| Submit Comment. | Comment submits, awaiting approval message displays. | Pass. |
+| Edit Comment Button. | Appears on user's own comments only. | Pass. |
+| Edit Comment. | Clicking edit populates form with comment text. | Pass. |
+| Update Comment. | Submits update, displays success message. | Pass. |
+| Delete Comment Button. | Appears on user's own comments only. | Pass. |
+| Delete Comment - modal. | Confirmation modal pops up. | Pass. |
+| Delete Comment - confirm. | Comment deleted, success message displays. | Pass. |
+| Logout Button. | Redirects to logout confirmation page. | Pass. |
+| Logout Confirmation. | Displays confirmation before logging out. | Pass. |
+| Responsive Design. | Site adapts to mobile, tablet, desktop. | Pass. |
+
+### Manual Testing Images
+
+![Username already exists](testing/username-exists.png)
+
+![New Account Sign In](testing/new-account-sign-in.png)
+
+![Incorrect Details](testing/incorrect-details.png)
+
+![Form not filled out](testing/lets-collaborate-error.png)
+
+![Delete comment modal](testing/delete-comment-modal.png)
+
+![Comment deleted](testing/deleted.png)
+
+![Collaboration Submitted](testing/collab-accepted.png)
+
+![Comment Approval](testing/comment-approval.png)
 
 
 ## User Stories Testing
