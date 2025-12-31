@@ -164,7 +164,7 @@ During the planning stages I created and Entity Relationship Diagram of what my 
 
 ## Testing
 
-Click here to find my testing file.
+Full testing documentation can be found in [TESTING.md](TESTING.md)
 
 ## Deployment
 
