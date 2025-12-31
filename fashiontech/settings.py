@@ -134,6 +134,11 @@ AUTH_PASSWORD_VALIDATORS = [
 
 ACCOUNT_EMAIL_VERIFICATION = 'none'
 
+# Django-allauth custom forms
+ACCOUNT_FORMS = {
+    'signup': 'about.forms.CustomSignupForm',
+}
+
 
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/

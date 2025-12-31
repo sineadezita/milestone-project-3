@@ -23,9 +23,9 @@ All pages pass HTML Validation at [W3C markup validation service](https://valida
 | Home | Pass | ![HTML validation](testing/html-home.png) |
 | About | Pass | ![HTML validation](testing/html-about.png) |
 | Sign Up | 
-| Sign In |
-| Sign Out |
-| Article Detail | Pass | 
+| Sign In | Pass | ![HTML validation](testing/html-sign-in-form.png) |
+| Sign Out | Pass | ![HTML validation](testing/html-sign-out.png) |
+| Article Detail | Pass | ![HTML validation](testing/html-article.png) |
 
 ### CSS Validation
 
@@ -135,12 +135,3 @@ Python code was validated using PEP8 standards, using [CI Python Linter](https:/
 - Feature: Collaboration form on About page
 - Test: Submitted form, verified in admin panel
 - Result: ✅ Pass
-
-
-
-
-
-
-
-
-
