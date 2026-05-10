@@ -74,9 +74,6 @@ MIDDLEWARE = [
     'allauth.account.middleware.AccountMiddleware',
 ]
 
-#Temporary for iamresponsive
-X_FRAME_OPTIONS = 'ALLOWALL'
-
 ROOT_URLCONF = 'fashiontech.urls'
 
 TEMPLATES = [
