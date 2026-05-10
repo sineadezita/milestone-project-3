@@ -1,4 +1,7 @@
 # Fashion Tech
+
+![Am I Responsive](wireframes/amiresposive.png)
+
 ## Introduction
 Fashion Tech is a blog sharing information on an emerging field in fashion, exploring the intersection of technology and fashion across Europe.
 
@@ -29,20 +32,16 @@ Fashion Tech is a content hub dedicated to covering the emerging technologies tr
 
 The following pages are screenshots from my website:
 
+### Wireframes
+
 ### Home/Blog page
-![Home Desktop](wireframes/home-desktop.png)
-![Home iPad](wireframes/home-ipad.png)
-![Home mobile](wireframes/home-phone.png)
+![Home Wireframe](wireframes/wireframe-home.png)
 
 ### About page
-![About Desktop](wireframes/about-desktop.png)
-![About iPad](wireframes/about-ipad.png)
-![About mobile](wireframes/about-phone.png)
+![About Wireframe](wireframes/wireframe-about.png)
 
-### Login form
-![Login Desktop](wireframes/join-desktop.png)
-![Login iPad](wireframes/join-ipad.png)
-![Login mobile](wireframes/join-phone.png)
+### Login page
+![Login Wireframe](wireframes/wireframe-login.png)
 
 ## Features
 
@@ -125,7 +124,47 @@ Comment authors can delete their own comments with a confirmation modal to preve
 
 ## User Stories
 
-All user stories are located here.
+### Site Admin
+- **As a Site Admin I can create, read, update and delete posts so that I can manage my blog content**
+   - Given a logged-in user, they can create a blog post
+   - Given a logged-in user, they can read a blog post
+   - Given a logged-in user, they can update a blog post
+   - Given a logged-in user, they can delete a blog post
+
+- **As a Site Admin I can create draft posts so that I can finish writing the content later**
+   - Given a logged in user, they can save a draft blog post
+   - Then they can finish the content at a later time
+
+- **As a Site Admin I can approve or disapprove comments so that I can filter out objectionable comments**
+   - Given a logged-in user, they can approve a comment
+   - Given a logged-in user, they can disapprove a comment
+
+### Site User
+- **As a Site User I can view a paginated list of posts so that I can select which posts I want to read**
+   - Given more than one post in the database, these multiple posts are listed
+   - When a user opens the main page, a list of posts is seen
+   - Then the user sees all post titles with pagination to choose what to read
+
+- **As a Site User/Admin I can view comments on an individual post so that I can read the conversation**
+   - Given one or more user comments, the admin can view them
+   - Then a site user can click on the comment thread and read the conversation
+
+- **As a Site User I can click on a post so that I can read the full text**
+   - When a blog post title is clicked on, a detailed view of the post is seen
+
+- **As a Site User I can leave comments on a post so that I can interact in the online community**
+   - When a user comment is approved
+   - Then a user can reply
+   - Given more than one comment, there is a conversation thread
+
+- **As a Site User I can modify or delete my comment on a post so that I can be involved in the conversation**
+   - Given a logged-in user, they can modify their comment
+   - Given a logged-in user, they can delete their comment
+
+- **As a Site User I can register an account so that I can comment on a post**
+   - Given an email, a user can register an account
+   - The user can login
+   - When the user is logged in, they can comment
 
 ## Images
 
@@ -160,7 +199,9 @@ Technologies Used:
 
 ## Database
 
-During the planning stages I created and Entity Relationship Diagram of what my database for the blog and how each table relates to each other. 
+During the planning stages I created and Entity Relationship Diagram of what my database for the blog and how each table relates to each other.
+
+![ERD Diagram](wireframes/erd.png)
 
 ## Testing
 
@@ -192,7 +233,7 @@ Before deployment, ensure you have:
 
 * Select **New** in the top-right corner of your Heroku Dashboard, and select **Create new app** from the dropdown menu.
 * Your app name must be unique, and then choose a region closest to you (EU or USA), and finally, select **Create App**.
-* From the new app **Settings**, click **Revela Config Vars**, and set your environment variables.
+* From the new app **Settings**, click **Reveal Config Vars**, and set your environment variables.
 
 | Key | Value |
 | --- | --- |
