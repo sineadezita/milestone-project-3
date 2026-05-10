@@ -1,6 +1,6 @@
 # Fashion Tech
 
-![Am I Responsive](wireframes/amiresposive.png)
+![Am I Responsive](wireframes/amiresponsive.png)
 
 ## Introduction
 Fashion Tech is a blog sharing information on an emerging field in fashion, exploring the intersection of technology and fashion across Europe.
